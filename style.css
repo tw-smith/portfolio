@@ -1,6 +1,68 @@
 /* Universal Styles */
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+}
+
+
 html {
 font-size: 16px;
 font-family: 'Arial', 'Helvetica', sans-serif;
-background-color: rgba(28,110,164,0.35);
+}
+
+h1{
+  font-size: 56px;
+  font-weight: bold;
+}
+
+p,a{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+body{
+  background-color: #FBD9E8;
+}
+
+#introduction, #projects {
+  width: 500px;
+  padding-left: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 50px;
+  margin-bottom: 200px;
+}
+
+#introduction h1 {
+  padding-bottom: 20px;
+}
+
+.topnav {
+  background-color: #99E6B3;
+  overflow: hidden;
+}
+
+.topnav a { /* Styling the links inside the nav buttons */
+  display: inline-block;
+  float: right;
+  color: black;
+  text-align: center;
+  padding: 14px 20px 14px 20px;
+  margin: 10px;
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.topnav a:hover { /* change the colour of the links on mouse hover */
+
+  color:black;
+  transform: scale(1.1)
+}
+
+.topnav a.active { /* change color of the active link */
+  background-color: dodgerblue;
+  color: white;
 }
