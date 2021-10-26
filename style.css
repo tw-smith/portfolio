@@ -5,7 +5,7 @@
   font-family: sans-serif;
 }
 
-
+/* Desktop/parent Styling */
 html {
 font-size: 16px;
 font-family: 'Arial', 'Helvetica', sans-serif;
@@ -21,12 +21,9 @@ p,a{
   font-weight: bold;
 }
 
-body{
-  background-color: #FBD9E8;
-}
-
-#introduction, #projects {
-  width: 500px;
+#introduction, #projects, #contact {
+  width: 30%;
+  height:60vh;
   padding-left: 40px;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -39,7 +36,7 @@ body{
 }
 
 .topnav {
-  background-color: #99E6B3;
+  background-color: #B3D9FF;
   overflow: hidden;
 }
 
@@ -65,4 +62,33 @@ body{
 .topnav a.active { /* change color of the active link */
   background-color: dodgerblue;
   color: white;
+}
+
+
+/* Mobile Styling */
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  #introduction, #projects, #contact{
+    margin: 1vw;
+    height: 90vh;
+    width:90vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .topnav a {
+    display: inline-block;
+    float: right;
+    color: black;
+    text-align: center;
+    padding: 2vh 5vw 2vh 5vw;
+    margin: 2vh;
+    text-decoration: none;
+    font-size: 0.7rem;
+    border-radius: 5px;
+    background-color: white;
+  }
 }
