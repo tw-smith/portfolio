@@ -40,6 +40,10 @@ p,a{
   margin-right: auto;
 }
 
+#introduction h1 {
+  padding-bottom: 20px;
+}
+
 #image {
   width: 50%;
   height:50vh;
@@ -50,11 +54,7 @@ p,a{
   margin-right: auto;
 }
 
-#introduction h1 {
-  padding-bottom: 20px;
-}
-
-.topnav {
+.topnav { /* Style the colour of the navbar and make it "sticky" on scroll */
   background-color: #B3D9FF;
   overflow: hidden;
   position:sticky;
@@ -94,7 +94,6 @@ p,a{
 
   #introduction, #projects, #contact{
     margin: 0vw;
-  /*  height: 90vh;*/
     width:90vw;
     padding-left: 5vw;
     padding-right: 5vw;
