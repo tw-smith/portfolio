@@ -8,7 +8,7 @@
         font-size: 100%;
         vertical-align: baseline;
         background: transparent;
-      /*  border: 1px solid red;*/
+       /*border: 1px solid red;*/
     }
 
 
@@ -53,6 +53,21 @@ main h2 {
   transition-duration: 0.5s;
 }
 
+.button-black {
+  border: 2px solid black;
+  margin: 20px;
+  padding: 10px;
+  font-size: 24pt;
+  text-decoration: none;
+  color: black;
+}
+
+.button-black:hover {
+  background-color: #00aaff;
+  border-color: #00aaff;
+  transition-duration: 0.5s;
+}
+
 
 #home {
   display: flex;
@@ -84,7 +99,9 @@ main h2 {
   justify-content: space-between;
   width: 100%;
   max-width: 1200px;
+
 }
+
 
 .profile-photo {
   border-radius: 200px;
@@ -162,8 +179,9 @@ main h2 {
 #contact {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   max-width: 600px;
+  height: 50vh;
 }
 
 .contact-strip {
