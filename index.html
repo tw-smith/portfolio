@@ -8,26 +8,38 @@
     <meta name="viewport"
     content="with=device-width, initial-scale=1.0">
   </head>
-
-  <!-- Header Navigation Bar -->
+  <!-- NAV BAR -->
   <body>
     <nav class="topnav">
-      <h1 class="nav-title">Toby Smith</h1>
       <ul class="nav-links">
-        <li><a href="#contact">CONTACT</a></li>
+        <li><a href="#about">ABOUT</a></li>
         <li><a href="#projects">PROJECTS</a></li>
-        <li><a href="#">ABOUT</a></li>
+        <li><a href="#contact">CONTACT</a></li>
       </ul>
     </nav>
     <main>
-      <article>
-        <!-- About Me -->
-        <h2>Hello! I'm Toby. I'm an aspiring web developer. </h2>
-        <p>About me about me about me about me</p>
-        <p>Second paragraph describing experience</p>
-        <!-- Projects Gallery -->
-        <section id="projects">
-          <h2>PROJECTS</h2>
+      <!--HOME SPLASH-->
+      <section id="home">
+        <div>Hello, I'm Toby Smith.<br>I'm an aspiring web developer.</div>
+        <a href="#about" class="button">Find out more</a>
+      </section>
+      <!--About me-->
+      <section id="about">
+        <div class="section-header">ABOUT</div>
+        <div id="about-content">
+          <div>
+            <ul>
+              <li>About me one</li>
+              <li>About me two</li>
+              <li>About me three</li>
+            </ul>
+          </div>
+          <img class="profile-photo" src="./assets/me.jpg" alt="A photo of Toby">
+        </div>
+      </section>
+      <!-- Projects Gallery -->
+      <section id="projects">
+          <div class="section-header">PROJECTS</div>
           <div id="gallery">
             <div class="gallery-tile">
               <p>Tile 1</p>
@@ -48,20 +60,14 @@
               <p>Tile 6</p>
             </div>
         </section>
-    </article>
-    <!-- Contact Me -->
-    <aside>
-      <h2>CONTACT</h2>
+      <!-- Contact Me -->
       <section id="contact">
-        <a href="https://github.com/tw-smith"><img src="./assets/GitHub-Mark-32px.png" alt="GitHub logo" width="32";></a>
-        <a href="https://www.linkedin.com/in/toby-smith-87b1185b"><img src="./assets/In-Blue-72-Γäó@2x.png" alt="LinkedIn logo" width="35"></a>
-        <!-- Avoid using mailto to improve UX and avoid email address scraping.
-             Add contact webform
-          <br>
-          <br>
-          <p>Email</p> -->
-        </section>
-    </aside>
-  </main>
+        <div class="section-header">CONTACT</div>
+        <div class="contact-strip">
+          <a href="https://github.com/tw-smith"><img src="./assets/GitHub-Mark-32px.png" alt="GitHub logo" width="32";></a>
+          <a href="https://www.linkedin.com/in/toby-smith-87b1185b"><img src="./assets/In-Blue-72-Γäó@2x.png" alt="LinkedIn logo" width="35"></a>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
