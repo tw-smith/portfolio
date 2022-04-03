@@ -8,6 +8,7 @@
         font-size: 100%;
         vertical-align: baseline;
         background: transparent;
+      /*  border: 1px solid red;*/
     }
 
 
@@ -93,10 +94,11 @@ main h2 {
 .topnav {
   display: flex;
   width: 100vw;
+  height: 50px;
   flex-direction: row;
   background-color: #536878;
   justify-content: space-between;
-  padding: 20px;
+/*  padding: 20px;*/
 }
 
 
@@ -110,16 +112,18 @@ main h2 {
 .nav-links a {
   border-radius: 5px;
   color: white;
-  padding: 14px 20px 14px 20px;
+  padding: 20px;
   margin: 10px;
   text-decoration: none;
 }
 
+
 .nav-links a:hover {
-  transform: scale(1.1)
+  color: #ba1d28;
+  transition-duration: 0.5s;
 }
 
-.nav-links a:active {
+.nav-links a:active{
   color: #ba1d28;
 }
 
