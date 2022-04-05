@@ -94,8 +94,6 @@ body {
   color: #ba1d28;
 }
 
-
-
 #about-content {
   display: flex;
   flex-direction: row;
@@ -115,6 +113,9 @@ body {
   flex-direction: row;
   background-color: #536878;
   justify-content: space-between;
+  top: 0;
+  position: sticky;
+  z-index: 2;
 }
 
 /* Gallery Styles */
@@ -139,11 +140,6 @@ body {
   text-align: center;
   display: inline-block;
   position: relative;
-}
-
-/* Contact styles */
-#contact {
-  height: 50vh;
 }
 
 .contact-strip {
