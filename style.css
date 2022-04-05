@@ -1,127 +1,158 @@
-/* Universal Styles */
-*{
-  margin: 0px;
-  padding: 0px;
-  font-family: sans-serif;
+/* CSS Reset */
+* {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
+       /*border: 1px solid red;*/
+    }
+
+/* Set global font styles */
+body {
+  font-size: 16px;
+  font-family: 'Raleway', 'Helvetica', sans-serif;;
+  font-weight: lighter;
 }
 
-/* Desktop/parent Styling */
-html {
-font-size: 16px;
-font-family: 'Arial', 'Helvetica', sans-serif;
+/* Generic style classes */
+.flexbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-h1{
-  font-size: 56px;
-  font-weight: bold;
+/* Generic main container for each section */
+.container {
+  height: 100vh;
+  width: 100vw;
 }
 
-h2{
-  font-style: italic;
-}
-
-p,a{
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.topnav {
-  position:sticky;
-  top:0px;
-}
-
-#introduction, #projects, #contact {
-  width: 30%;
-  height:fit-content;
-  padding: 40px;
-  margin-top: 20px;
-  margin-bottom: 1px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#introduction h1 {
-  padding-bottom: 20px;
-}
-
-#image {
-  width: 50%;
-  height:50vh;
-  padding: 40px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.topnav { /* Style the colour of the navbar and make it "sticky" on scroll */
-  background-color: #B3D9FF;
-  overflow: hidden;
-  position:sticky;
-  top:0px;
-}
-
-.topnav a { /* Styling the links inside the nav buttons */
-  display: inline-block;
-  float: right;
-  color: black;
+/* Home splash screen styling */
+.splash {
+  background: rgb(2,0,36);
+  background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(98,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  font-size: 36pt;
+  line-height: 40pt;
   text-align: center;
-  padding: 14px 20px 14px 20px;
-  margin: 10px;
-  text-decoration: none;
-  font-size: 17px;
-  border-radius: 5px;
-  background-color: white;
-}
-
-
-.topnav a:hover { /* change the colour of the links on mouse hover */
-  color:black;
-  transform: scale(1.1)
-}
-
-.topnav a.active { /* change color of the active link */
-  background-color: dodgerblue;
   color: white;
 }
 
-
-/* Mobile Styling */
-@media screen and (max-width: 800px) {
-  h1 {
-    font-size: 2rem;
-  }
-
-  #introduction, #projects, #contact{
-    margin: 0vw;
-    width:90vw;
-    padding-left: 5vw;
-    padding-right: 5vw;
-    padding-top: 20vw;
-    border-top: 15vw;
-  }
-
-  #image {
-    margin: 0vw;
-    height: 90vh;
-    width: 90vw;
-    height:30vh;
-    padding: 2vw;
-    border-top: 15vw;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .topnav a {
-    display: inline-block;
-    float: right;
-    color: black;
-    text-align: center;
-    padding: 2vh 5vw 2vh 5vw;
-    margin: 2vh;
-    text-decoration: none;
-    font-size: 0.7rem;
-    border-radius: 5px;
-    background-color: white;
-  }
+.section-header {
+  font-weight: lighter;
+  text-align: center;
+  flex-basis: 32px;
+  font-size: 32pt;
+  padding: 20px;
 }
+
+/* Button styling and psuedo-class behaviour */
+.button {
+  border: 2px solid white;
+  margin: 20px;
+  padding: 10px;
+  font-size: 24pt;
+  text-decoration: none;
+  color: white;
+}
+
+.button:hover {
+  background-color: #00aaff;
+  border-color: #00aaff;
+  transition-duration: 0.5s;
+}
+
+.black {
+  border: 2px solid black;
+  color: black;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-links a {
+  border-radius: 5px;
+  color: white;
+  padding: 20px;
+  margin: 10px;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #ba1d28;
+  transition-duration: 0.5s;
+}
+
+.nav-links a:active{
+  color: #ba1d28;
+}
+
+#about-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+}
+
+
+.profile-photo {
+  border-radius: 200px;
+}
+
+/* Desktop Styles */
+.topnav {
+  height: 50px;
+  flex-direction: row;
+  background-color: #536878;
+  justify-content: space-between;
+  top: 0;
+  position: sticky;
+  z-index: 2;
+}
+
+/* Gallery Styles */
+#projects {
+  background-color: #f5f5f5;
+}
+
+#gallery {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.gallery-tile {
+  width: 300px;
+  height: 200px;
+  background-color: dodgerblue;
+  margin: 20px;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+}
+
+.contact-strip {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.contact-strip a {
+  padding: 20px;
+}
+
+
+
+
+/* Mobile Styles */

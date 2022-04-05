@@ -4,56 +4,79 @@
     <meta charset="utf-8">
     <Title>Toby Smith</title>
     <link href="style.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
     <meta name="viewport"
     content="with=device-width, initial-scale=1.0">
   </head>
+  <!-- NAV BAR -->
   <body>
-    <nav>
-      <ul>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#">About</a></li>
+    <nav class="flexbox container topnav">
+      <ul class="nav-links">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#projects">PROJECTS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
       </ul>
     </nav>
     <main>
-      <article>
-        <h1>Hello! I'm Toby. I'm an aspiring web developer. </h1>
-        <p>After several years working as an engineer in the aerospace industry, I am looking to move into the tech sector.</p>
-        <br>
-        <p>I have coding experience from performing simulations and carrying out tool development in my engineering roles. I am working on a number of personal projects utilising these skills in a web development environment.</p>
-        <h1>Here are some of the things I've been working on.</h1>
-        <br>
-        <br>
-        <h2>Analog EXIF</h2>
-        <br>
-        <p>A simple web app built in Ruby on Rails to record EXIF style data when practising analog photograpy.</p>
-        <br>
-        <ul>
-          <li><p>Tracks roll data like start and end dates, push level and development and scan statuses.</p></li>
-          <li><p>Records "EXIF style" data for individual photos such as aperture and shutter speed.</p></li>
-          <li><p>Under active development with features such as automated update of EXIF data of digital scan files in the pipeline.</p></li>
-        </ul>
-        <figure>
-          <img src="./assets/analog_exif_screenshot.png"
-               alt="A screenshot of the Analog EXIF app"
-               width="1048"
-               height="481">
-          <figcaption>Analog EXIF</figcaption>
-        </figure>
-    <aside>
-      <h1>Contact</h1>
-      <p>Get in touch!</p>
-      <br>
-      <a href="https://github.com/tw-smith"> <span>Github</span></a>
-      <br>
-      <br>
-      <a href="https://www.linkedin.com/in/toby-smith-87b1185b"> <span>LinkedIn</span></a>
-      <!-- Avoid using mailto to improve UX and avoid email address scraping.
-           Add contact webform
-        <br>
-        <br>
-        <p>Email</p> -->
-    </aside>
-  </main>
+      <!--HOME SPLASH-->
+      <section id="home" class="flexbox container splash">
+        <div>Hello, I'm Toby Smith.<br>I'm an aspiring web developer.</div>
+        <a href="#about" class="button">Find out more</a>
+      </section>
+      <!--About me-->
+
+      <section id="about" class="flexbox container">
+        <div class="section-header">ABOUT</div>
+
+        <div id="about-content">
+          <div class="flexbox" style="max-width:40%">
+            <ul>
+              <li>I am a highly motivated engineering manager with a proven track record of delivering quality results, taking on new challenges with enthusiasm and learning new skills quickly.</li>
+              <br>
+              <li>I am experienced in the use of MATLAB for engineering simulation, data manipulation and the development of new engineering tools.</li>
+              <br>
+              <li>After working on several complex technical projects, I am accustomed to taking a pragmatic approach to problem solving.</li>
+              <br>
+              <li>After several years working in the defence aerospace industry, I am looking to build upon my existing skill set and expand my horizons into the tech sector.</li>
+              <br>
+            </ul>
+            <a href="./assets/Toby_Smith_CV.pdf" target="_blank" class="button black">Download CV</a>
+          </div>
+            <img class="profile-photo" src="./assets/me.jpg" alt="A photo of Toby">
+    </div>
+      </section>
+      <!-- Projects Gallery -->
+
+      <section id="projects" class="flexbox container">
+          <div class="section-header">PROJECTS</div>
+          <div id="gallery">
+            <div class="gallery-tile">
+              <p>Tile 1</p>
+            </div>
+           <div class="gallery-tile">
+              <p>Tile 2</p>
+            </div>
+            <div class="gallery-tile">
+              <p>Tile 3</p>
+            </div>
+            <div class="gallery-tile">
+              <p>Tile 4</p>
+            </div>
+            <div class="gallery-tile">
+              <p>Tile 5</p>
+            </div>
+            <div class="gallery-tile">
+              <p>Tile 6</p>
+            </div>
+        </section>
+      <!-- Contact Me -->
+      <section id="contact" class="flexbox container">
+        <div class="section-header">CONTACT</div>
+        <div class="contact-strip">
+          <a href="https://github.com/tw-smith"><img src="./assets/GitHub-Mark-32px.png" alt="GitHub logo" width="32";></a>
+          <a href="https://www.linkedin.com/in/toby-smith-87b1185b"><img src="./assets/In-Blue-72-Γäó@2x.png" alt="LinkedIn logo" width="35"></a>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
