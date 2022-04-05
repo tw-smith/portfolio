@@ -10,7 +10,7 @@
   </head>
   <!-- NAV BAR -->
   <body>
-    <nav class="topnav">
+    <nav class="flexbox container topnav">
       <ul class="nav-links">
         <li><a href="#about">ABOUT</a></li>
         <li><a href="#projects">PROJECTS</a></li>
@@ -19,13 +19,15 @@
     </nav>
     <main>
       <!--HOME SPLASH-->
-      <section id="home">
+      <section id="home" class="flexbox container splash">
         <div>Hello, I'm Toby Smith.<br>I'm an aspiring web developer.</div>
         <a href="#about" class="button">Find out more</a>
       </section>
       <!--About me-->
-      <div class="section-header">ABOUT</div>
-      <section id="about">
+
+      <section id="about" class="flexbox container">
+        <div class="section-header">ABOUT</div>
+
         <div id="about-content">
           <div style="max-width:40%">
             <ul>
@@ -38,20 +40,20 @@
               <li>After several years working in the defence aerospace industry, I am looking to build upon my existing skill set and expand my horizons into the tech sector.</li>
               <br>
             </ul>
-            <a href="./assets/Toby_Smith_CV.pdf" target="_blank" class="button-black">Download CV</a>
+            <a href="./assets/Toby_Smith_CV.pdf" target="_blank" class="button black">Download CV</a>
           </div>
-
             <img class="profile-photo" src="./assets/me.jpg" alt="A photo of Toby">
-      </div>
+    </div>
       </section>
       <!-- Projects Gallery -->
-      <section id="projects">
+
+      <section id="projects" class="flexbox container">
           <div class="section-header">PROJECTS</div>
           <div id="gallery">
             <div class="gallery-tile">
               <p>Tile 1</p>
             </div>
-            <div class="gallery-tile">
+           <div class="gallery-tile">
               <p>Tile 2</p>
             </div>
             <div class="gallery-tile">
@@ -68,7 +70,7 @@
             </div>
         </section>
       <!-- Contact Me -->
-      <section id="contact">
+      <section id="contact" class="flexbox container">
         <div class="section-header">CONTACT</div>
         <div class="contact-strip">
           <a href="https://github.com/tw-smith"><img src="./assets/GitHub-Mark-32px.png" alt="GitHub logo" width="32";></a>

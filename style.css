@@ -1,5 +1,4 @@
-/* Universal Styles */
-
+/* CSS Reset */
 * {
         margin: 0;
         padding: 0;
@@ -11,33 +10,46 @@
        /*border: 1px solid red;*/
     }
 
-
-html {
+/* Set global font styles */
+body {
   font-size: 16px;
-  font-family: 'Raleway', 'Helvetica', sans-serif;
+  font-family: 'Raleway', 'Helvetica', sans-serif;;
   font-weight: lighter;
 }
 
-main {
+/* Generic style classes */
+.flexbox {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
 }
 
-main h2 {
-  font-weight: lighter;
+/* Generic main container for each section */
+.container {
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Home splash screen styling */
+.splash {
+  background: rgb(2,0,36);
+  background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(98,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  font-size: 36pt;
+  line-height: 40pt;
   text-align: center;
+  color: white;
 }
 
 .section-header {
   font-weight: lighter;
   text-align: center;
+  flex-basis: 32px;
   font-size: 32pt;
   padding: 20px;
 }
 
+/* Button styling and psuedo-class behaviour */
 .button {
   border: 2px solid white;
   margin: 20px;
@@ -53,71 +65,10 @@ main h2 {
   transition-duration: 0.5s;
 }
 
-.button-black {
+.black {
   border: 2px solid black;
-  margin: 20px;
-  padding: 10px;
-  font-size: 24pt;
-  text-decoration: none;
   color: black;
 }
-
-.button-black:hover {
-  background-color: #00aaff;
-  border-color: #00aaff;
-  transition-duration: 0.5s;
-}
-
-
-#home {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-  background: rgb(2,0,36);
-  background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(98,9,121,1) 35%, rgba(0,212,255,1) 100%);
-  font-size: 36pt;
-  line-height: 40pt;
-  text-align: center;
-  color: white;
-}
-
-
-#about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-}
-
-#about-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1200px;
-
-}
-
-
-.profile-photo {
-  border-radius: 200px;
-}
-
-/* Desktop Styles */
-.topnav {
-  display: flex;
-  width: 100vw;
-  height: 50px;
-  flex-direction: row;
-  background-color: #536878;
-  justify-content: space-between;
-/*  padding: 20px;*/
-}
-
 
 .nav-links {
   display: flex;
@@ -134,7 +85,6 @@ main h2 {
   text-decoration: none;
 }
 
-
 .nav-links a:hover {
   color: #ba1d28;
   transition-duration: 0.5s;
@@ -146,21 +96,37 @@ main h2 {
 
 
 
+#about-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+}
+
+
+.profile-photo {
+  border-radius: 200px;
+}
+
+/* Desktop Styles */
+.topnav {
+  height: 50px;
+  flex-direction: row;
+  background-color: #536878;
+  justify-content: space-between;
+}
+
 /* Gallery Styles */
 #projects {
   background-color: #f5f5f5;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
 }
 
 #gallery {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   max-width: 1200px;
   width: 100%;
 }
@@ -177,17 +143,17 @@ main h2 {
 
 /* Contact styles */
 #contact {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  max-width: 600px;
   height: 50vh;
 }
 
 .contact-strip {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+
+.contact-strip a {
+  padding: 20px;
 }
 
 
