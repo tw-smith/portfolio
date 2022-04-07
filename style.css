@@ -105,6 +105,7 @@ body {
 
 .profile-photo {
   border-radius: 200px;
+  height: 400px;
 }
 
 /* Desktop Styles */
@@ -156,3 +157,20 @@ body {
 
 
 /* Mobile Styles */
+@media screen and (max-width: 500px) {
+  #about-content {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .profile-photo {
+    border-radius: 200px;
+    height: 200px;
+  }
+
+  .gallery-tile {
+    width: 150px;
+    height: 100px;
+    margin: 10px;
+  }
+}
