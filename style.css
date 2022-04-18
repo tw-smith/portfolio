@@ -35,12 +35,20 @@ body {
 
 /* Home splash screen styling */
 .splash {
-  height: 100vh;
-  background: rgb(2,0,36);
-  background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(98,9,121,1) 35%, rgba(0,212,255,1) 100%);
+
+
+}
+
+.splash-text{
   font-size: 1.3rem;
   text-align: center;
   color: white;
+}
+
+.splash-background{
+  height: 100vh;
+  background: rgb(2,0,36);
+  background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(98,9,121,1) 35%, rgba(0,212,255,1) 100%);
 }
 
 .section-header {
@@ -161,7 +169,7 @@ body {
   }
 
 
-  .splash {
+  .splash-text {
     font-size: 3.6rem;
   }
 
