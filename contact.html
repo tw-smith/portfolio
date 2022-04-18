@@ -11,10 +11,10 @@
     <style>
 
       #contact-form {
-        border: 2px solid white;
+        border: 0.25rem solid black;
         border-radius: 0.5rem;
-        width: 500px;
-        background-color: rgba(100,100,100,0.8);
+        width: 40vw;
+        background-color: rgba(255,255,255,0.25);
       }
 
       .form-group {
@@ -33,7 +33,11 @@
 
       }
       .form-group > input {
-        flex: 2;
+        flex: 4;
+      }
+
+      .form-group > textarea {
+        flex: 1;
       }
 
       textarea, input {
@@ -41,10 +45,14 @@
          border-radius: 0.15rem;
          padding: 0.2rem;
          font-family: helvetica, sans-serif;
-
       }
+
+      textarea:focus, input:focus {
+        border: 0.15rem solid blue;
+      }
+
       textarea{
-        width: 100%;
+        width: 80%;
         box-sizing: border-box;
       }
 
@@ -53,6 +61,7 @@
 
     <body>
       <main class="splash-background flexbox container">
+        <div class="section-header" style="color: white;">Contact Me</div>
         <form id="contact-form" class="flexbox">
           <div class="form-group">
           <label for="name-field">Name:</label>
