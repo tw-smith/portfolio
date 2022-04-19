@@ -31,6 +31,8 @@ body {
 /* Generic main container for each section */
 .container {
   width: 100vw;
+
+  min-height: 600px;
 }
 
 /* Home splash screen styling */
@@ -146,7 +148,7 @@ body {
   justify-content: space-around;
 }
 
-.contact-strip a {
+.contact-strip a, button {
   padding: 20px;
 }
 
@@ -216,4 +218,54 @@ body {
     height: 200px;
     margin: 20px;
   }
-}
+
+/* FORM STYLES */
+        #contact-form {
+          border: 0.25rem solid black;
+          border-radius: 0.5rem;
+          position: fixed;
+          top: 0px;
+          left: 0px;
+          width: 40vw;
+          background-color: rgba(0,0,0,0.5);
+
+        }
+
+        .form-group {
+          margin: 1rem;
+          display: flex;
+          justify-content: flex-end;
+          width: 80%;
+          margin: 1rem;
+        }
+
+        .form-group > label {
+          color: white;
+          font-weight: bold;
+          flex: 1;
+          padding: 0.5rem;
+
+        }
+        .form-group > input {
+          flex: 4;
+        }
+
+        .form-group > textarea {
+          flex: 1;
+        }
+
+        textarea, input {
+           background-color: white;
+           border-radius: 0.15rem;
+           padding: 0.2rem;
+           font-family: helvetica, sans-serif;
+        }
+
+        textarea:focus, input:focus {
+          border: 0.15rem solid blue;
+        }
+
+        textarea{
+          width: 80%;
+          box-sizing: border-box;
+        }
