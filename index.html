@@ -12,16 +12,16 @@
   <body>
     <nav class="flexbox topnav">
       <ul class="nav-links">
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#projects">PROJECTS</a></li>
-        <li><a href="#contact">CONTACT</a></li>
+        <li><a href="#" onclick="smoothScroll(`about`); return false;">ABOUT</a></li>
+        <li><a href="#" onclick="smoothScroll(`projects`); return false;">PROJECTS</a></li>
+        <li><a href="#" onclick="smoothScroll(`contact`); return false;">CONTACT</a></li>
       </ul>
     </nav>
     <main>
       <!--HOME SPLASH-->
       <section id="home" class="flexbox container splash-background splash-text">
         <div>Hello, I'm Toby Smith.<br>I'm an aspiring web developer.</div>
-        <a href="#about" class="button">Find out more</a>
+        <a href="#" onclick="smoothScroll(`about`); return false;" class="button">Find out more</a>
       </section>
       <!--About me-->
       <section id="about" class="flexbox container">
@@ -70,8 +70,8 @@
       <section id="contact" class="flexbox container">
         <div class="section-header">CONTACT</div>
         <div class="contact-strip">
-          <a href="https://github.com/tw-smith"><img src="./assets/GitHub-Mark-32px.png" alt="GitHub logo" width="32";></a>
-          <a href="https://www.linkedin.com/in/toby-smith-87b1185b"><img src="./assets/linkedin_blue.png" alt="LinkedIn logo" width="35"></a>
+          <a href="https://github.com/tw-smith" target="_blank"><img src="./assets/GitHub-Mark-32px.png" alt="GitHub logo" width="32";></a>
+          <a href="https://www.linkedin.com/in/toby-smith-87b1185b" target="_blank"><img src="./assets/linkedin_blue.png" alt="LinkedIn logo" width="35"></a>
           <button onclick="openForm()"><img src="./assets/envelope-fill.svg" alt="Email icon" width="35"/></button>
 
 
@@ -99,6 +99,13 @@
     </main>
 
     <script>
+      function smoothScroll(element){
+        document.getElementById(element).scrollIntoView({behavior:"smooth"});
+      }
+
+
+
+
       function openForm(){
         var modal = document.getElementById("contact-modal");
         var form = document.getElementById("contact-form")
