@@ -64,8 +64,10 @@ body {
 }
 
 .button:hover {
-  background-color: #00aaff;
-  border-color: #00aaff;
+/*  background-color: #00aaff;
+  border-color: #00aaff;*/
+  background-color: white;
+  color: black;
   transition-duration: 0.5s;
 }
 
@@ -89,7 +91,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: #ba1d28;
+  color: rgb(98,1,121);
   transition-duration: 0.5s;
 }
 
@@ -112,7 +114,8 @@ body {
   height: 50px;
   width: 100vw;
   flex-direction: row;
-  background-color: #536878;
+  background-color: rgb(2,0,36);
+  border-bottom: 0.2rem solid rgb(0,212,255);
   top: 0;
   position: sticky;
   z-index: 2;
@@ -124,6 +127,10 @@ body {
   flex-direction: row;
   justify-content: center;
   width: 100%;
+}
+
+#contact {
+  background-color: rgb(230,230,230);
 }
 
 .gallery-tile {
@@ -143,6 +150,44 @@ body {
 
 .contact-strip a, button {
   padding: 20px;
+}
+
+
+/* FORM STYLES */
+#contact-form {
+  width: 100vw;
+}
+
+.form-group {
+  margin: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  width: 80%;
+  margin: 0.2rem;
+}
+
+.form-group > input {
+  flex: 4;
+}
+
+.form-group > textarea {
+  flex: 1;
+}
+
+textarea, input {
+   background-color: white;
+   border-radius: 0.15rem;
+   padding: 0.5rem;
+   font-family: helvetica, sans-serif;
+}
+
+textarea:focus, input:focus {
+  border: 0.15rem solid blue;
+}
+
+textarea{
+  width: 80%;
+  box-sizing: border-box;
 }
 
 /* Landscape phones and tablets */
@@ -195,6 +240,9 @@ body {
     width: 50%;
   }
 
+  #contact-form {
+    width: 40vw;
+  }
   .topnav {
     justify-content: space-between;
   }
@@ -211,66 +259,3 @@ body {
     margin: 20px;
   }
 }
-
-/* FORM STYLES */
-        .modal {
-          display: none;
-            height:100vh;
-            width:100vw;
-            background-color: rgba(0,0,0,0.4);
-            position: fixed;
-            top: 0px;
-            left: 0px;
-        }
-
-
-
-        #contact-form {
-          border: 0.25rem solid black;
-          border-radius: 0.5rem;
-          position: fixed;
-          top: 0px;
-          left: 0px;
-          width: 40vw;
-          background-color: #7cb9e8;
-
-        }
-
-        .form-group {
-          margin: 1rem;
-          display: flex;
-          justify-content: flex-end;
-          width: 80%;
-          margin: 1rem;
-        }
-
-        .form-group > label {
-          color: white;
-          font-weight: bold;
-          flex: 1;
-          padding: 0.5rem;
-
-        }
-        .form-group > input {
-          flex: 4;
-        }
-
-        .form-group > textarea {
-          flex: 1;
-        }
-
-        textarea, input {
-           background-color: white;
-           border-radius: 0.15rem;
-           padding: 0.2rem;
-           font-family: helvetica, sans-serif;
-        }
-
-        textarea:focus, input:focus {
-          border: 0.15rem solid blue;
-        }
-
-        textarea{
-          width: 80%;
-          box-sizing: border-box;
-        }
