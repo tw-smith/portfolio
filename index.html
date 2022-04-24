@@ -72,18 +72,17 @@
         <div class="contact-strip">
           <a href="https://github.com/tw-smith" target="_blank"><img src="./assets/GitHub-Mark-32px.png" alt="GitHub logo" width="32";></a>
           <a href="https://www.linkedin.com/in/toby-smith-87b1185b" target="_blank"><img src="./assets/linkedin_blue.png" alt="LinkedIn logo" width="35"></a>
-          <button onclick="openForm()"><img src="./assets/envelope-fill.svg" alt="Email icon" width="35"/></button>
 
 
         </div>
-        <div id="contact-modal" class="modal">
+      <!--  <div id="contact-modal" class="modal"> -->
         <form id="contact-form" class="flexbox">
           <div class="form-group">
-          <label for="name-field">Name:</label>
+          <label hidden for="name-field">Name:</label>
           <input id="name-field" class="form-field" type="text" placeholder="Enter your name" required>
         </div>
         <div class="form-group">
-          <label for="email-field">Email:</label>
+          <label hidden for="email-field">Email:</label>
           <input id="email-field" class="form-field" type="email" placeholder="Enter your email address" required>
         </div>
         <div class="form-group">
@@ -93,7 +92,7 @@
           <input class="form-field" type="submit">
         </div>
         </form>
-      </div>
+    <!--  </div> -->
       </section>
 
     </main>
@@ -101,33 +100,6 @@
     <script>
       function smoothScroll(element){
         document.getElementById(element).scrollIntoView({behavior:"smooth"});
-      }
-
-
-
-
-      function openForm(){
-        var modal = document.getElementById("contact-modal");
-        var form = document.getElementById("contact-form")
-        modal.style.display="block";
-        form.style.display="block"
-        let width = window.innerWidth;
-        let height = window.innerHeight;
-        let form_width = form.offsetWidth;
-        let form_height = form.offsetHeight;
-        form.style.top=`${(height/2) - (form_height/2)}px`;
-        form.style.left=`${(width/2) - (form_width/2)}px`;
-      }
-      function closeForm () {
-        document.getElementById("contact-form").style.display="none";
-        document.getElementById("contact-modal").style.display="none";
-      }
-
-      window.onclick = function (event) {
-        let modal = document.getElementById("contact-modal");
-        if (event.target == modal) {
-          closeForm();
-        }
       }
     </script>
 
