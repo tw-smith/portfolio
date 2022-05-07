@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <Title>Toby Smith</title>
-    <link href="style.css" rel="stylesheet">
+    <link href="static/style.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
     <meta name="viewport"
     content="with=device-width, initial-scale=1.0">
@@ -28,7 +28,7 @@
         <div class="section-header">ABOUT</div>
         <div id="about-content" class="flexbox">
         <div>
-          <img class="profile-photo" src="./assets/me.jpg" alt="A photo of Toby">
+          <img class="profile-photo" src="static/me.jpg" alt="A photo of Toby">
         </div>
           <ul>
             <li>I am a highly motivated engineering manager with a proven track record of delivering quality results, taking on new challenges with enthusiasm and learning new skills quickly.</li>
@@ -41,7 +41,7 @@
             <br>
           </ul>
         </div>
-          <a href="./assets/Toby_Smith_CV_public.pdf" target="_blank" class="button black">Download CV</a>
+          <a href="static/Toby_Smith_CV_public.pdf" target="_blank" class="button black">Download CV</a>
       </section>
       <!-- Projects Gallery -->
       <section id="projects" class="flexbox container">
@@ -70,26 +70,28 @@
       <section id="contact" class="flexbox container">
         <div class="section-header">CONTACT</div>
         <div class="contact-strip">
-          <a href="https://github.com/tw-smith" target="_blank"><img src="./assets/GitHub-Mark-32px.png" alt="GitHub logo" width="32";></a>
-          <a href="https://www.linkedin.com/in/toby-smith-87b1185b" target="_blank"><img src="./assets/linkedin_blue.png" alt="LinkedIn logo" width="35"></a>
+          <a href="https://github.com/tw-smith" target="_blank"><img src="static/GitHub-Mark-32px.png" alt="GitHub logo" width="32";></a>
+          <a href="https://www.linkedin.com/in/toby-smith-87b1185b" target="_blank"><img src="static/linkedin_blue.png" alt="LinkedIn logo" width="35"></a>
 
 
         </div>
       <!--  <div id="contact-modal" class="modal"> -->
-        <form id="contact-form" class="flexbox">
+        <form id="contact-form" class="flexbox" action="", method="post">
+            {{ form.hidden_tag() }}
           <div class="form-group">
-          <label hidden for="name-field">Name:</label>
-          <input id="name-field" class="form-field" type="text" placeholder="Enter your name" required>
+            {{ form.name.label }}<br>
+            {{ form.name }}
         </div>
         <div class="form-group">
-          <label hidden for="email-field">Email:</label>
-          <input id="email-field" class="form-field" type="email" placeholder="Enter your email address" required>
+           {{ form.email.label }}<br>
+           {{ form.email }}
         </div>
         <div class="form-group">
-          <textarea class="form-field" rows="8"> Enter your message here.</textarea>
+          {{ form.message.label }}<br>
+          {{ form.message }}
         </div>
           <div class="form-group">
-          <input class="form-field" type="submit">
+          {{ form.submit() }}
         </div>
         </form>
     <!--  </div> -->
