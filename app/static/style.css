@@ -1,3 +1,34 @@
+/* BEM Plan
+
+BLOCKS
+   - Carousel
+   - tile
+   - button
+   - link
+   - flexbox container
+   - header
+
+
+ELEMENTS
+  - link__nav
+  - button__download
+
+
+
+MODIFIERS
+
+
+
+
+
+
+*/
+
+
+
+
+
+
 /* CSS Reset */
 * {
         margin: 0;
@@ -21,6 +52,59 @@ body {
 }
 
 /* Generic style classes */
+
+/* TOPNAV BLOCK */
+.topnav {
+  display: flex;
+  height: 50px;
+  width: 100vw;
+  flex-direction: row;
+  background-color: rgb(2,0,36);
+  border-bottom: 0.2rem solid rgb(0,212,255);
+  top: 0;
+  position: sticky;
+  z-index: 2;
+}
+
+.topnav__links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+  color: white;
+}
+
+.topnav__links a {
+  padding: 20px;
+  margin: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.topnav__links a:hover {
+  color: rgb(98,1,121);
+  transition-duration: 0.5s;
+}
+
+.topnav__links a:active {
+  color: #ba1d28;
+}
+
+/* CAROUSEL BLOCK */
+
+
+
+
+
+
+/* ELEMENTS */
+
+
+
+
+
+
+
 .flexbox {
   display: flex;
   flex-direction: column;
@@ -88,28 +172,6 @@ body {
   color: black;
 }
 
-.nav-links {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  list-style: none;
-}
-
-.nav-links a {
-  color: white;
-  padding: 20px;
-  margin: 10px;
-  text-decoration: none;
-}
-
-.nav-links a:hover {
-  color: rgb(98,1,121);
-  transition-duration: 0.5s;
-}
-
-.nav-links a:active{
-  color: #ba1d28;
-}
 
 #about-content {
   width: 80%;
@@ -122,16 +184,7 @@ body {
 }
 
 
-.topnav {
-  height: 50px;
-  width: 100vw;
-  flex-direction: row;
-  background-color: rgb(2,0,36);
-  border-bottom: 0.2rem solid rgb(0,212,255);
-  top: 0;
-  position: sticky;
-  z-index: 2;
-}
+
 
 #gallery {
  /* display: flex;
