@@ -91,6 +91,33 @@ body {
 }
 
 /* CAROUSEL BLOCK */
+.carousel {
+  display: flex;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 20vh 0;
+}
+
+.carousel__tile {
+  flex-shrink: 0;
+  scroll-snap-align: center;
+  width: 100vw;
+  height: 67vw;
+  background-color: rgba(0,212,255,0.4);
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  margin: 0 20vw 5vh 20vw;
+  border-radius: 2rem;
+  text-decoration: none;
+}
+
+.carousel__tile:hover {
+  background-color: rgba(158, 239, 255, 0.4);
+  transition-duration: 0.5s;
+}
+
+
 
 
 
@@ -112,17 +139,8 @@ body {
   align-items: center;
 }
 
-.carousel {
-  display: flex;
-  overflow: auto;
-  scroll-snap-type: x mandatory;
-  scroll-padding: 20vh 0;
-}
 
-.carousel .gallery-tile {
-  flex-shrink: 0;
-  scroll-snap-align: center;
-}
+
 
 /* Generic main container for each section */
 .container {
@@ -143,6 +161,7 @@ body {
 }
 
 .section-header {
+  color: black;
   font-weight: bold;
   text-align: center;
   font-size: 1.5rem;
@@ -198,15 +217,6 @@ body {
   background-color: rgb(230,230,230);
 }
 
-.gallery-tile {
-  width: 100vw;
-  height: 67vw;
-  background-color: dodgerblue;
-  text-align: center;
-  display: inline-block;
-  position: relative;
-  margin: 0 20vw 5vh 20vw;
-}
 
 .contact-strip {
   display: flex;
@@ -255,7 +265,7 @@ textarea:focus, input:focus {
   border: 0.15rem solid blue;
 }
 
-textarea{
+textarea {
   width: 80%;
   box-sizing: border-box;
 }
@@ -323,7 +333,7 @@ textarea{
     border-radius: 300px;
   }
   /* make project gallery tiles bigger for desktop */
-  .gallery-tile {
+  .carousel__tile {
     width: 600px;
     height: 400px;
   }
