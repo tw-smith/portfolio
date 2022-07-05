@@ -28,6 +28,18 @@ body {
   align-items: center;
 }
 
+.carousel {
+  display: flex;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 20vh 0;
+}
+
+.carousel .gallery-tile {
+  flex-shrink: 0;
+  scroll-snap-align: center;
+}
+
 /* Generic main container for each section */
 .container {
   width: 100vw;
@@ -122,10 +134,10 @@ body {
 }
 
 #gallery {
-  display: flex;
+ /* display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: center;
+  justify-content: center;*/
   width: 100%;
 }
 
@@ -140,6 +152,7 @@ body {
   text-align: center;
   display: inline-block;
   position: relative;
+  margin: 0 20vw 5vh 20vw;
 }
 
 .contact-strip {
@@ -258,8 +271,7 @@ textarea{
   }
   /* make project gallery tiles bigger for desktop */
   .gallery-tile {
-    width: 300px;
-    height: 200px;
-    margin: 20px;
+    width: 600px;
+    height: 400px;
   }
 }
