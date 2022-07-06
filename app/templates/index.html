@@ -11,24 +11,24 @@
   <!-- NAV BAR -->
   <body>
     <nav class="topnav">
-      <ul class="topnav__links">
-        <li><a href="#" onclick="smoothScroll(`about`); return false;">ABOUT</a></li>
-        <li><a href="#" onclick="smoothScroll(`projects`); return false;">PROJECTS</a></li>
-        <li><a href="#" onclick="smoothScroll(`contact`); return false;">CONTACT</a></li>
+      <ul class="topnav__item">
+        <li><a class="topnav__link" href="#" onclick="smoothScroll(`about`); return false;">ABOUT</a></li>
+        <li><a class="topnav__link" href="#" onclick="smoothScroll(`projects`); return false;">PROJECTS</a></li>
+        <li><a class="topnav__link" href="#" onclick="smoothScroll(`contact`); return false;">CONTACT</a></li>
       </ul>
     </nav>
     <main>
       <!--HOME SPLASH-->
-      <section id="home" class="flexbox container splash-background splash-text">
+      <section id="home" class="landing">
         <div>Hello, I'm Toby Smith.<br>I'm an aspiring web developer.</div>
         <a href="#" onclick="smoothScroll(`about`); return false;" class="button">Find out more</a>
       </section>
       <!--About me-->
-      <section id="about" class="flexbox container">
-        <div class="section-header">ABOUT</div>
-        <div id="about-content" class="flexbox">
+      <section id="about" class="about">
+        <div class="header">ABOUT</div>
+        <div id="about-content" class="about__content">
         <div>
-          <img class="profile-photo" src="static/me.jpg" alt="A photo of Toby">
+          <img class="about__photo" src="static/me.jpg" alt="A photo of Toby">
         </div>
           <ul>
             <li>I am a highly motivated engineering manager with a proven track record of delivering quality results, taking on new challenges with enthusiasm and learning new skills quickly.</li>
@@ -41,47 +41,41 @@
             <br>
           </ul>
         </div>
-          <a href="static/Toby_Smith_CV_public.pdf" target="_blank" class="button black">Download CV</a>
+          <a href="static/Toby_Smith_CV_public.pdf" target="_blank" class="button button--black">Download CV</a>
       </section>
       <!-- Projects Gallery -->
-      <section id="projects" class="flexbox">
-          <div class="section-header">PROJECTS</div>
-          <div id="gallery" class="carousel">
+      <section id="projects" class="projects">
+          <div class="header">PROJECTS</div>
+          <div class="carousel">
             <a href="" class="carousel__tile">
-              <p class="section-header">Portfolio Site</p>
+              <p class="header">Portfolio Site</p>
             </a>
            <a href="" class="carousel__tile">
-              <p class="section-header">Recipe Reader</p>
+              <p class="header">Recipe Reader</p>
            </a>
             <a href="" class="carousel__tile">
-              <p class="section-header">Kolston Dogs</p>
+              <p class="header">Kolston Dogs</p>
             </a>
+          </div>
         </section>
       <!-- Contact Me -->
-      <section id="contact" class="flexbox container">
-        <div class="section-header">CONTACT</div>
-        <div class="contact-strip">
-          <a href="https://github.com/tw-smith" target="_blank"><img src="static/GitHub-Mark-32px.png" alt="GitHub logo" width="32";></a>
-          <a href="https://www.linkedin.com/in/toby-smith-87b1185b" target="_blank"><img src="static/linkedin_blue.png" alt="LinkedIn logo" width="35"></a>
-
-
-        </div>
-      <!--  <div id="contact-modal" class="modal"> -->
-        <form id="contact-form" class="flexbox" action="", method="post">
+      <section id="contact" class="contact">
+        <div class="header">CONTACT</div>
+        <form id="contact-form" class="form" action="", method="post">
             {{ form.hidden_tag() }}
-          <div class="form-group">
+          <div class="form__item">
             {{ form.name }}
         </div>
         <div class="form-group-hp">
           {{ form.lastname }}
         </div>
-        <div class="form-group">
+        <div class="form__item">
            {{ form.email }}
         </div>
-        <div class="form-group">
+        <div class="form__item">
           {{ form.message }}
         </div>
-          <div class="form-group">
+          <div class="form__item">
           {{ form.submit() }}
         </div>
         </form>
@@ -92,7 +86,10 @@
             {% endfor %}
           {% endif %}
         {% endwith %}
-    <!--  </div> -->
+        <div class="contact__icons">
+          <a href="https://github.com/tw-smith" target="_blank"><img src="static/GitHub-Mark-32px.png" alt="GitHub logo" width="32";></a>
+          <a href="https://www.linkedin.com/in/toby-smith-87b1185b" target="_blank"><img src="static/linkedin_blue.png" alt="LinkedIn logo" width="35"></a>
+        </div>
       </section>
 
     </main>
