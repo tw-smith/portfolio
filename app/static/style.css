@@ -164,40 +164,26 @@ body {
   /*height: 100vh;*/
 }
 
-/* CAROUSEL BLOCK */
-.carousel {
+.project__content {
   display: flex;
-  overflow: auto;
-  scroll-snap-type: x mandatory;
-  scroll-padding: 20vh 0;
-  width: 75%;
-  height: 40vh;
+  flex-direction: column;
+  width: 60vw;
 }
 
-.carousel__tile {
-  flex-shrink: 0;
-  scroll-snap-align: center;
-  width: 80%;
-  height: 80%;
-  background-color: rgba(0,212,255,0.4);
-  text-align: center;
-  display: inline-block;
-  position: relative;
-  margin: 0 5vw 0 5vw;
-  border-radius: 2rem;
-  text-decoration: none;
+.project__photo {
+  width: 400px;
+  margin: 2rem;
 }
+
+.project__text {
+  margin: 2rem;
+}
+
 
 @media screen and (min-width: 1100px) {
-  .carousel__tile {
-    width: 400px;
-    height: 300px;
+  .project__content{
+    flex-direction: row;
   }
-}
-
-.carousel__tile:hover {
-  background-color: rgba(158, 239, 255, 0.4);
-  transition-duration: 0.5s;
 }
 
 
