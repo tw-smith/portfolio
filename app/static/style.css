@@ -167,11 +167,10 @@ body {
 .project__content {
   display: flex;
   flex-direction: column;
-  width: 60vw;
+  width: 95%;
 }
 
 .project__photo {
-  width: 400px;
   margin: 2rem;
 }
 
@@ -182,7 +181,13 @@ body {
 
 @media screen and (min-width: 1100px) {
   .project__content{
+    width: 60vw;
     flex-direction: row;
+  }
+
+  .project__photo {
+    width: 400px;
+    margin: 2rem;
   }
 }
 
@@ -255,7 +260,6 @@ body {
   text-align: center;
   font-size: 1.5rem;
   padding: 20px;
-  margin-bottom: 100px;
 }
 
 
@@ -279,10 +283,4 @@ body {
   .topnav {
     justify-content: space-between;
   }
-
-  /* make project gallery tiles bigger for desktop 
-  .carousel__tile {
-    width: 600px;
-    height: 400px;
-  }*/
 }
