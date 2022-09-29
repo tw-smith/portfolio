@@ -62,7 +62,16 @@
       <!-- Contact Me -->
       <section id="contact" class="contact">
         <div class="header">CONTACT</div>
-        <form id="contact-form" class="form" action="", method="post">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+          {% for message in messages %}
+            <li class="form__flash">{{ message }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      {% endwith %}
+        <form id="contact-form" class="form" action="", method="POST">
             {{ form.hidden_tag() }}
           <div class="form__item">
             {{ form.name }}
@@ -79,15 +88,8 @@
           <div class="form__item">
           {{ form.submit() }}
         </div>
-        {{ form.recaptcha }}
+       {{ form.recaptcha }}
         </form>
-        {% with messages = get_flashed_messages() %}
-          {% if messages %}
-            {% for message in messages %}
-              <p>{{ messsage }}</p>
-            {% endfor %}
-          {% endif %}
-        {% endwith %}
         <div class="contact__icons">
           <a href="https://github.com/tw-smith" target="_blank"><img src="static/GitHub-Mark-32px.png" alt="GitHub logo" width="32";></a>
           <a href="https://www.linkedin.com/in/toby-smith-87b1185b" target="_blank"><img src="static/linkedin_blue.png" alt="LinkedIn logo" width="35"></a>
