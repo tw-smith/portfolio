@@ -34,19 +34,10 @@
           Hi! My name is Toby and I'm an aspiring web developer based in Bristol. An aerospace engineer by training, I am now
           looking for a new challenge in web development.
         </p>
+        <br>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
-          <!-- <ul>
-            <li>I am a highly motivated engineering manager with a proven track record of delivering quality results, taking on new challenges with enthusiasm and learning new skills quickly.</li>
-            <br>
-            <li>I am experienced in the use of MATLAB for engineering simulation, data manipulation and the development of new engineering tools.</li>
-            <br>
-            <li>After working on several complex technical projects, I am accustomed to taking a pragmatic approach to problem solving.</li>
-            <br>
-            <li>After several years working in the defence aerospace industry, I am looking to build upon my existing skill set and expand my horizons into the tech sector.</li>
-            <br>
-          </ul> -->
         </div>
           <a href="static/Toby_Smith_CV_public.pdf" target="_blank" class="button button--black">Download CV</a>
       </section>
@@ -66,7 +57,16 @@
       <!-- Contact Me -->
       <section id="contact" class="contact">
         <div class="header">CONTACT</div>
-        <form id="contact-form" class="form" action="", method="post">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+          {% for message in messages %}
+            <li class="form__flash">{{ message }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      {% endwith %}
+        <form id="contact-form" class="form" action="", method="POST">
             {{ form.hidden_tag() }}
           <div class="form__item">
             {{ form.name }}
@@ -83,14 +83,8 @@
           <div class="form__item">
           {{ form.submit() }}
         </div>
+       {{ form.recaptcha }}
         </form>
-        {% with messages = get_flashed_messages() %}
-          {% if messages %}
-            {% for message in messages %}
-              <p>{{ messsage }}</p>
-            {% endfor %}
-          {% endif %}
-        {% endwith %}
         <div class="contact__icons">
           <a href="https://github.com/tw-smith" target="_blank"><img src="static/GitHub-Mark-32px.png" alt="GitHub logo" width="32";></a>
           <a href="https://www.linkedin.com/in/toby-smith-87b1185b" target="_blank"><img src="static/linkedin_blue.png" alt="LinkedIn logo" width="35"></a>

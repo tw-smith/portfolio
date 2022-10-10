@@ -249,6 +249,12 @@ body {
   font-family: inherit;
 }
 
+.form__flash {
+  color: red;
+  list-style: none;
+  font-weight: bold;
+}
+
 
 .form-group-hp {
   display: none;
