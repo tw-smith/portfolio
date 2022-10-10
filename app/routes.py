@@ -27,6 +27,7 @@ def index():
                                                 Email address: {email}
                                             
                                                 Message: {message}'''.format(sender=form.name.data, email=form.email.data, message=form.message.data))
+            
             try:
                 sg = SendGridAPIClient(app.config['SENDGRID_API_KEY'])
                 response = sg.send(message)
