@@ -31,29 +31,71 @@
           <img class="about__photo" src="static/me.jpg" alt="A photo of Toby">
         </div>
         <p>
-          Hi! My name is Toby and I'm an aspiring web developer based in Bristol. An aerospace engineer by training, I am now
-          looking for a new challenge in web development.
-        </p>
+          Hi! My name is Toby and I'm an aspiring web developer based in Bristol. An aerospace engineer by training,
+           I am now looking for a new challenge in web development.
+       
         <br>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        <br>
+      
+          I have worked on several complex technical projects in the aerospace sector which I believe has given me a pragmatic approach to problem solving. 
+          I also believe I am a fast learner with a proven track record of taking on new challenges with enthusiasm.
+       
+        <br>
+        <br>
+        
+          Want to find out more? Scroll down to read about some of the projects I have been working on and click on the link below to download a copy of my CV. 
+          Interested in working together? Please get in touch using the contact form at the bottom of this page!
         </p>
         </div>
           <a href="static/Toby_Smith_CV_public.pdf" target="_blank" class="button button--black">Download CV</a>
       </section>
       <!-- Projects Gallery -->
       <section id="projects" class="projects">
-          <div class="header">PROJECTS</div>
-          <div id="project1" class="project__content">
-            <img class="project__photo" src="static/UpMock_template.png" alt="A placeholder project image">
-            <p class="project__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="header">
+          PROJECTS
+        </div>
+        <div id="analogue-exif" class="project__content">
+          <img class="project__photo" src="static/UpMock_template.png" alt="A placeholder project image">
+          <div class="project__text">
+            <h3 class="project__header">Analogue EXIF</h3>
+            <p class="project__description">Digital cameras automatically store photo metadata such as time, date and exposure settings with the image file. 
+              When practicing analogue photography, it is necessary to manually record the same information. This means having to carry a notebook 
+              and pen, which are easily forgetten. This web app allows the user to electronically record and store the same information using their 
+              mobile phone - something which most of us have with us at all times!
+              <br><br>
+              At it's core, this is a CRUD SPA built with Angular. The backend framework is built in Flask with SQLite used as the database solution.
+            </p>
           </div>
-          <div id="project2" class="project__content">
-            <img class="project__photo" src="static/UpMock_template.png" alt="A placeholder project image">
-            <p class="project__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div id="recipe-reader" class="project__content">
+          <img class="project__photo" src="static/UpMock_template.png" alt="A placeholder project image">
+          <div class="project__text">
+            <h3 class="project__header">Recipe Reader</h3>
+            <p class="project__description">When planning meals for the coming week, it can be tedious going through all the recipes and collating the 
+              various ingredients. This app aims to solve that problem by allowing the user to simply take photos of each of the recipes they 
+              want to use before creating a shopping list for the user.
+              <br><br>
+              The app uses the Google Cloud Vision API to perform OCR on the photo uploaded by the user before attempting to parse the 
+              ingredients list. The user is given the opportunity to correct incorrectly parsed entries. Once the user has uploaded a 
+              number of photos, the app creates a shopping list, with all common ingredients collated.
+            </p>
           </div>
-          
-        </section>
+        </div>
+        <div id="tour-tracker" class="project__content">
+          <img class="project__photo" src="static/UpMock_template.png" alt="A placeholder project image">
+          <div class="project__text">
+            <h3 class="project__title">Tour Tracker</h3>
+            <p class="project__description">I am a big fan of cycle touring and I like to plot the routes I have followed on a map day by day so 
+              friends and family back home can follow my progress. Previously, this meant downloading individual GPS track data files 
+              before manually joining them and uploading to a Google Maps account.
+              <br><br>
+              This app allows the user to connect to their account on a number of popular fitness tracking services (Strava, RideWithGPS etc) 
+              and specify a date range. The app will then retrieve the GPS track data for all activities in that date range before plotting 
+              them on a map which the user can then share or embed in their own website.
+            </p>
+          </div>
+        </div>
+      </section>
       <!-- Contact Me -->
       <section id="contact" class="contact">
         <div class="header">CONTACT</div>
