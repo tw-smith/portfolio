@@ -5,6 +5,8 @@
     <Title>Toby Smith</title>
     <link href="static/style.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <script src="https://js.hcaptcha.com/1/api.js"
+        async defer></script>
     <meta name="viewport"
     content="with=device-width, initial-scale=1.0">
   </head>
@@ -122,10 +124,12 @@
         <div class="form__item">
           {{ form.message }}
         </div>
+        {{ hcaptcha }}
           <div class="form__item">
           {{ form.submit() }}
         </div>
-       {{ form.recaptcha }}
+        <div class="h-captcha" data-sitekey="5b454c9b-4fa0-4cf8-98d9-a74d22650bd1"></div>
+       
         </form>
         <div class="contact__icons">
           <a href="https://github.com/tw-smith" target="_blank"><img src="static/GitHub-Mark-32px.png" alt="GitHub logo" width="32";></a>

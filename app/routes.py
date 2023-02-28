@@ -1,5 +1,5 @@
 from flask import render_template, flash, redirect, request
-from app import app
+from app import app, hcaptcha
 from app.forms import ContactForm
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
@@ -19,24 +19,28 @@ def index():
         print(form.validate_on_submit())
         print(form.errors)
         if form.validate_on_submit():
-            message = Mail(from_email = app.config['EMAIL_ADDRESS'], 
-                        to_emails = app.config['EMAIL_ADDRESS'], 
-                        subject = "Portfolio Email", 
-                        plain_text_content='''Message from: {sender}
-                        
-                                                Email address: {email}
-                                            
-                                                Message: {message}'''.format(sender=form.name.data, email=form.email.data, message=form.message.data))
-            
-            try:
-                sg = SendGridAPIClient(app.config['SENDGRID_API_KEY'])
-                response = sg.send(message)
-                flash("Success! I'll get back to you as soon as I can.")
-            except Exception as e:
-                flash('Error! Message was not sent.')
-            return redirect('/#contact')
+            if hcaptcha.verify():
+                message = Mail(from_email = app.config['EMAIL_ADDRESS'], 
+                            to_emails = app.config['EMAIL_ADDRESS'], 
+                            subject = "Portfolio Email", 
+                            plain_text_content='''Message from: {sender}
+                            
+                                                    Email address: {email}
+                                                
+                                                    Message: {message}'''.format(sender=form.name.data, email=form.email.data, message=form.message.data))
+                
+                try:
+                    sg = SendGridAPIClient(app.config['SENDGRID_API_KEY'])
+                    response = sg.send(message)
+                    flash("Success! I'll get back to you as soon as I can.")
+                except Exception as e:
+                    flash('Error! Message was not sent.')
+                return redirect('/#contact')
+            else:
+                flash('hCaptcha error!')
+                return redirect('/#contact')
         else:
-            flash('Error! Form validation or reCAPTCHA failed.')
+            flash('Error! Form validation failed.')
             return redirect('/#contact')
 
 
