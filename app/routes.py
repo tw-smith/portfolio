@@ -5,8 +5,8 @@ from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
 
 # TODO REMOVE for prod
-import ssl
-ssl._create_default_https_context = ssl._create_unverified_context
+# import ssl
+# ssl._create_default_https_context = ssl._create_unverified_context
 
 @app.route('/', methods=['GET','POST'])
 @app.route('/index', methods=['GET','POST'])
