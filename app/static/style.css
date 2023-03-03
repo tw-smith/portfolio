@@ -175,7 +175,13 @@ body {
 }
 
 .project__text {
+  display: flex;
+  flex-direction: column;
   margin: 2rem;
+}
+
+.project__description {
+  margin-top: 0.5rem;
 }
 
 
