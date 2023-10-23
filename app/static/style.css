@@ -172,6 +172,7 @@ body {
 
 .project__photo {
   margin: 2rem;
+  height: auto;
 }
 
 .project__text {

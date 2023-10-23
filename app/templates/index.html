@@ -57,36 +57,51 @@
           PROJECTS
         </div>
         <div id="analogue-exif" class="project__content">
-          <img class="project__photo" src="static/UpMock_template.png" alt="A placeholder project image">
+          <img class="project__photo" src="static/tourtracker-screely-mockup_resize.png" alt="Tourtracker mockup image">
           <div class="project__text">
-            <h3 class="project__header">Analogue EXIF</h3>
-            <p class="project__description">Digital cameras automatically store photo metadata such as time, date and exposure settings with the image file. 
-              When practicing analogue photography, it is necessary to manually record the same information. This means having to carry a notebook 
-              and pen, which are easily forgetten. This web app allows the user to electronically record and store the same information using their 
-              mobile phone - something which most of us have with us at all times!
-              <br><br>
-              At it's core, this is a CRUD SPA built with Angular. The backend framework is built in Flask with SQLite used as the database solution.
+            <h3 class="project__header">Tour Tracker</h3>
+            <p class="project__description">I have completed several long bicycle tours over the years and I like to
+                plot the routes I have followed on a map so I can share my progress day by day with friends and family.
+                Previously, this meant downloading individual GPS track files, manually stitching them together and then
+                uploading the resulting file to a service such as Google Maps.
+                <br><br>
+                I created Tour Tracker to automate and simplify this process by leveraging the user data available
+                through the public API provided by the popular fitness tracking service Strava. Once the user has
+                granted access to their Strava data, Tour Tracker will retrieve the relevant activity data through the
+                Strava API before creating a visualisation of the route using the Google Maps JavaScript API.
+                <br><br>
+                The visualisation will automatically be updated whenever the user uploads a new activity to Strava
+                through the use of a webhook subscription through the Strava Webhook Events API.
+                <br><br>
+                Key Technologies: Python, Flask, HTML/CSS, JavaScript, Webhooks, External APIs, SQLite
             </p>
           </div>
         </div>
         <div id="recipe-reader" class="project__content">
-          <img class="project__photo" src="static/UpMock_template.png" alt="A placeholder project image">
+          <img class="project__photo" src="static/cyclingsouth-screely-mockup_resize.png" alt="Cycling South mockup image">
           <div class="project__text">
-            <h3 class="project__header">Recipe Reader</h3>
-            <p class="project__description">When planning meals for the coming week, it can be tedious going through all the recipes and collating the 
-              various ingredients. This app aims to solve that problem by allowing the user to simply take photos of each of the recipes they 
-              want to use before creating a shopping list for the user.
-              <br><br>
-              The app uses the Google Cloud Vision API to perform OCR on the photo uploaded by the user before attempting to parse the 
-              ingredients list. The user is given the opportunity to correct incorrectly parsed entries. Once the user has uploaded a 
-              number of photos, the app creates a shopping list, with all common ingredients collated.
+            <h3 class="project__header">Cycling South Blog</h3>
+            <p class="project__description">I recently completed a year long cycle tour through Latin America from
+                Seattle to northern Argentina (albeit with a pandemic induced hiatus in the middle!) To document this
+                journey and share my photography I started a blog on the Adobe Portfolio platform. I found Portfolio
+                not particularly well suited to my needs and so decided to see if I could build something better myself.
+                <br><br>
+                My key requirements were that I be able to upload photos and articles easily from the road, retain
+                design freedom on how the website front end was constructed and for the website to provide an enjoyable
+                user experience across a variety of end user devices. For these reasons I chose to use a headless CMS
+                architecture, settling on Strapi, complemented by a front end built using the Angular framework.
+                <br><br>
+                I leveraged the capabilities of the Angular framework, such as using dependency injection to inject a
+                service to resize image files based on viewport size.
+                <br><br>
+                Key Technologies: Strapi CMS, Angular, Responsive Web Design, TypeScript
             </p>
           </div>
         </div>
         <div id="tour-tracker" class="project__content">
-          <img class="project__photo" src="static/UpMock_template.png" alt="A placeholder project image">
+          <img class="project__photo" src="static/arcade-screely-mockup_resize.png" alt="Arcade mockup image">
           <div class="project__text">
-            <h3 class="project__title">Tour Tracker</h3>
+            <h3 class="project__title">Arcade</h3>
             <p class="project__description">I am a big fan of cycle touring and I like to plot the routes I have followed on a map day by day so 
               friends and family back home can follow my progress. Previously, this meant downloading individual GPS track data files 
               before manually joining them and uploading to a Google Maps account.
