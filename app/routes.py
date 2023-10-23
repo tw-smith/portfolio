@@ -8,6 +8,8 @@ from sendgrid.helpers.mail import Mail, To, From, Content
 # import ssl
 # ssl._create_default_https_context = ssl._create_unverified_context
 
+
+
 @app.route('/', methods=['GET','POST'])
 @app.route('/index', methods=['GET','POST'])
 def index():
@@ -43,6 +45,22 @@ def index():
         else:
             flash('Error! Form validation failed.')
             return redirect('/#contact')
+
+@app.route('/projects/tourtracker', methods=['GET'])
+def tourtracker():
+    return render_template('tourtracker.html')
+
+@app.route('/projects/arcade', methods=['GET'])
+def arcade():
+    return render_template('arcade.html')
+
+@app.route('/projects/cyclingsouth', methods=['GET'])
+def cyclingsouth():
+    return render_template('cyclingsouth.html')
+
+@app.route('/projects/authserver', methods=['GET'])
+def authserver():
+    return render_template('authserver.html')
 
 
 

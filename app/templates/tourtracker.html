@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tour Tracker</title>
+        <link href="../static/style.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <meta name="viewport"
+    content="with=device-width, initial-scale=1.0">
+</head>
+<body>
+    <nav class="topnav">
+      <ul class="topnav__item">
+        <li><a class="topnav__link" href="../#about">ABOUT</a></li>
+        <li><a class="topnav__link" href="../#projects">PROJECTS</a></li>
+        <li><a class="topnav__link" href="../#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+    <main>
+                <div id="analogue-exif" class="project__content">
+          <img class="project__photo" src="../static/tourtracker-screely-mockup_resize.png" alt="Tourtracker mockup image">
+          <div class="project__text">
+            <h3 class="project__header">Tour Tracker</h3>
+            <p class="project__description">I have completed several long bicycle tours over the years and I like to
+                plot the routes I have followed on a map so I can share my progress day by day with friends and family.
+                Previously, this meant downloading individual GPS track files, manually stitching them together and then
+                uploading the resulting file to a service such as Google Maps.
+                <br><br>
+                I created Tour Tracker to automate and simplify this process by leveraging the user data available
+                through the public API provided by the popular fitness tracking service Strava. Once the user has
+                granted access to their Strava data, Tour Tracker will retrieve the relevant activity data through the
+                Strava API before creating a visualisation of the route using the Google Maps JavaScript API.
+                <br><br>
+                The visualisation will automatically be updated whenever the user uploads a new activity to Strava
+                through the use of a webhook subscription through the Strava Webhook Events API.
+                <br><br>
+                Key Technologies: Python, Flask, HTML/CSS, JavaScript, Webhooks, External APIs, SQLite
+            </p>
+          </div>
+        </div>
+    </main>
+
+</body>
+</html>
