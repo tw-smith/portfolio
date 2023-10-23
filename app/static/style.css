@@ -183,15 +183,25 @@ body {
   height: auto;
 }
 
+.project__header {
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 20px;
+}
+
 .project__content {
   display: flex;
   flex-direction: column;
-  width: 95%;
+  width: 100%;
+  align-items: center;
 }
 
 .project__photo {
   margin: 2rem;
   height: auto;
+  width: 100%;
 }
 
 .project__text {
@@ -202,6 +212,7 @@ body {
 
 .project__description {
   margin-top: 0.5rem;
+  text-align: justify;
 }
 
 
@@ -219,15 +230,19 @@ body {
     height: auto;
   }
 
-
-
-  .project__content{
-    width: 60vw;
-    flex-direction: row;
+  .project__text {
+    width: 50%;
   }
 
+
+
+  /*.project__content{*/
+  /*  width: 60vw;*/
+  /*  flex-direction: row;*/
+  /*}*/
+
   .project__photo {
-    width: 400px;
+    width: 700px;
     margin: 2rem;
   }
 }
@@ -321,7 +336,7 @@ body {
   .header {
     font-size: 3.2rem;
   }
-  
+
   .topnav {
     justify-content: space-between;
   }
