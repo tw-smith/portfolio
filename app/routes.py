@@ -48,15 +48,50 @@ def index():
 
 @app.route('/projects/tourtracker', methods=['GET'])
 def tourtracker():
-    return render_template('tourtracker.html')
+    return render_template('tourtracker_template.html',
+                           project_title='Tour Tracker',
+                           project_image_url='../static/tourtracker-screely-mockup_resize.png',
+                           project_website={
+                               'url': 'https://tourtracker.tw-smith.me',
+                               'desc': 'tourtracker.tw-smith.me'
+                           },
+                           project_repo=[{
+                               'url': 'https://github.com/tw-smith/tourtracker',
+                               'desc': 'github.com/tw-smith/tourtracker'
+                           }])
 
 @app.route('/projects/arcade', methods=['GET'])
 def arcade():
-    return render_template('arcade.html')
+    return render_template('arcade_template.html',
+                           project_title='Arcade',
+                           project_image_url='../static/arcade-screely-mockup_resize.png',
+                           project_website={
+                               'url': 'https://arcade.tw-smith.me',
+                               'desc': 'arcade.tw-smith.me'
+                           },
+                           project_repo=[{
+                               'url': 'https://github.com/tw-smith/arcade',
+                               'desc': 'github.com/tw-smith/arcade'
+                           }])
 
 @app.route('/projects/cyclingsouth', methods=['GET'])
 def cyclingsouth():
-    return render_template('cyclingsouth.html')
+    return render_template('cyclingsouth_template.html',
+                           project_title='Cycling South Blog',
+                           project_image_url='../static/cyclingsouth-screely-mockup_resize.png',
+                           project_website={
+                               'url': 'https://cycling-south.com',
+                               'desc': 'cycling-south.com'
+                           },
+                           project_repo=[{
+                               'url': 'https://github.com/tw-smith/tourblog-angular',
+                               'desc': 'github.com/tw-smith/tourblog-angular'
+                           },
+                               {
+                                   'url': 'https://github.com/tw-smith/tourblog-strapi',
+                                   'desc': 'github.com/tw-smith/tourblog-strapi'
+                               }])
+
 
 @app.route('/projects/authserver', methods=['GET'])
 def authserver():
