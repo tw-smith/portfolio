@@ -50,7 +50,7 @@ def index():
 def tourtracker():
     return render_template('tourtracker_template.html',
                            project_title='Tour Tracker',
-                           project_image_url='../static/tourtracker-screely-mockup_resize.png',
+                           project_image_url='../static/tourtracker_home_screely.png',
                            project_website={
                                'url': 'https://tourtracker.tw-smith.me',
                                'desc': 'tourtracker.tw-smith.me'
@@ -64,7 +64,7 @@ def tourtracker():
 def arcade():
     return render_template('arcade_template.html',
                            project_title='Arcade',
-                           project_image_url='../static/arcade-screely-mockup_resize.png',
+                           project_image_url='../static/arcade_home_screely.png',
                            project_website={
                                'url': 'https://arcade.tw-smith.me',
                                'desc': 'arcade.tw-smith.me'
@@ -78,18 +78,18 @@ def arcade():
 def cyclingsouth():
     return render_template('cyclingsouth_template.html',
                            project_title='Cycling South Blog',
-                           project_image_url='../static/cyclingsouth-screely-mockup_resize.png',
+                           project_image_url='../static/cyclingsouth_home_screely.png',
                            project_website={
                                'url': 'https://cycling-south.com',
                                'desc': 'cycling-south.com'
                            },
                            project_repo=[{
-                               'url': 'https://github.com/tw-smith/tourblog-angular',
-                               'desc': 'github.com/tw-smith/tourblog-angular'
+                               'url': 'https://github.com/tw-smith/tourblog-strapi',
+                               'desc': 'github.com/tw-smith/tourblog-strapi'
                            },
                                {
-                                   'url': 'https://github.com/tw-smith/tourblog-strapi',
-                                   'desc': 'github.com/tw-smith/tourblog-strapi'
+                                   'url': 'https://github.com/tw-smith/tourblog-angular',
+                                   'desc': 'github.com/tw-smith/tourblog-angular'
                                }])
 
 
