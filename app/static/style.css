@@ -16,6 +16,14 @@ html {
   
 }
 
+b {
+  font-weight: bold;
+}
+
+i {
+  font-style: italic;
+}
+
 /* Set global font styles */
 body {
   font-family: 'Raleway', 'Helvetica', sans-serif;
@@ -111,6 +119,13 @@ body {
   }
 }
 
+.button--project {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  margin: 0;
+  text-decoration: none;
+}
+
 
 /* ABOUT BLOCK */
 .about {
@@ -160,18 +175,77 @@ body {
   justify-content: center;
   align-items: center;
   scroll-margin-top: 50px;
+  padding-bottom: 15px;
   /*width: 100vw;*/
   /*height: 100vh;*/
+  background-color: #f5f5f5;
+}
+
+.projectsgallery {
+  display: grid;
+  grid-template-columns: 100%;
+  row-gap: 10px;
+  column-gap: 10px;
+  width: 90%;
+}
+
+.projectsgallery__tile {
+  position: relative;
+}
+
+.projectsgallery__tile-image {
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  overflow: hidden;
+}
+
+.projectsgallery__tile--overlay {
+  display: none;
+  background-color: rgba(0,0,0, 0.5);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  text-align: center;
+}
+
+.overlay__text {
+  font-weight: bold;
+  color: white;
+  font-size: 2rem;
+}
+
+.projectsgallery__tile:hover > .projectsgallery__tile--overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+
+.project__header {
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 20px;
 }
 
 .project__content {
+  background-color: rgb(230,230,230);
   display: flex;
   flex-direction: column;
-  width: 95%;
+  width: 100%;
+  align-items: center;
 }
 
 .project__photo {
-  margin: 2rem;
+  margin-bottom: 1rem;
+  height: auto;
+  width: 90%;
 }
 
 .project__text {
@@ -182,18 +256,31 @@ body {
 
 .project__description {
   margin-top: 0.5rem;
+  text-align: justify;
+}
+
+.repo__list {
+  list-style-image: url("GitHub-Mark-32px.png") ;
 }
 
 
 @media screen and (min-width: 1100px) {
-  .project__content{
-    width: 60vw;
-    flex-direction: row;
+  .projectsgallery {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    row-gap: 10px;
+    column-gap: 10px;
+    width: 90%;
   }
 
+  .project__text {
+    width: 50%;
+  }
+
+
   .project__photo {
-    width: 400px;
-    margin: 2rem;
+    width: 700px;
+    /*margin: 2rem;*/
   }
 }
 
@@ -204,7 +291,7 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  /*width: 100vw;*/
+  width: 100vw;
   height: 100vh;
   background-color: rgb(230,230,230);
 }
@@ -285,11 +372,6 @@ body {
 
   .header {
     font-size: 3.2rem;
-  }
-
-  /* Add off grey background to highlight section differences (looks weird on mobile) */
-  .projects {
-    background-color: #f5f5f5;
   }
 
   .topnav {

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tour Tracker</title>
+        <link href="../static/style.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <meta name="viewport"
+    content="with=device-width, initial-scale=1.0">
+</head>
+<body>
+    <nav class="topnav">
+      <ul class="topnav__item">
+        <li><a class="topnav__link" href="../#about">ABOUT</a></li>
+        <li><a class="topnav__link" href="../#projects">PROJECTS</a></li>
+        <li><a class="topnav__link" href="../#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+    <main>
+        <div class="project__content">
+            <h3 class="project__header">{{ project_title }}</h3>
+            <img class="project__photo" src="{{ project_image_url }}" alt="Project mockup image">
+            <a href="{{ project_website['url'] }}" class="button button--black button--project" target="_blank">View Site</a>
+{#            <a href="{{ project_repo[0]['url'] }}" class="button button--black button--project">View GitHub</a>#}
+            <div class="project__text">
+{#                <a href="{{ project_website['url'] }}"><p>{{ project_website['desc'] }}</p></a>#}
+{#                {% for repo in project_repo %}#}
+{#                    <ul class="repo__list">#}
+{#                        <li><a href="{{ repo['url'] }}">{{ repo['desc'] }}</a></li>#}
+{#                    </ul>#}
+{#                {% endfor %}#}
+                <br><br>
+                <p class="project__description">
+                    {%  block project_description %}
+                    {%  endblock %}
+                </p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

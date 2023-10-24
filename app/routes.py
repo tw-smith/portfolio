@@ -8,6 +8,8 @@ from sendgrid.helpers.mail import Mail, To, From, Content
 # import ssl
 # ssl._create_default_https_context = ssl._create_unverified_context
 
+
+
 @app.route('/', methods=['GET','POST'])
 @app.route('/index', methods=['GET','POST'])
 def index():
@@ -43,6 +45,67 @@ def index():
         else:
             flash('Error! Form validation failed.')
             return redirect('/#contact')
+
+@app.route('/projects/tourtracker', methods=['GET'])
+def tourtracker():
+    return render_template('tourtracker_template.html',
+                           project_title='Tour Tracker',
+                           project_image_url='../static/tourtracker_home_screely.png',
+                           project_website={
+                               'url': 'https://tourtracker.tw-smith.me',
+                               'desc': 'tourtracker.tw-smith.me'
+                           },
+                           project_repo=[{
+                               'url': 'https://github.com/tw-smith/tourtracker',
+                               'desc': 'github.com/tw-smith/tourtracker'
+                           }])
+
+@app.route('/projects/arcade', methods=['GET'])
+def arcade():
+    return render_template('arcade_template.html',
+                           project_title='Arcade',
+                           project_image_url='../static/arcade_home_screely.png',
+                           project_website={
+                               'url': 'https://arcade.tw-smith.me',
+                               'desc': 'arcade.tw-smith.me'
+                           },
+                           project_repo=[{
+                               'url': 'https://github.com/tw-smith/arcade',
+                               'desc': 'github.com/tw-smith/arcade'
+                           }])
+
+@app.route('/projects/cyclingsouth', methods=['GET'])
+def cyclingsouth():
+    return render_template('cyclingsouth_template.html',
+                           project_title='Cycling South Blog',
+                           project_image_url='../static/cyclingsouth_home_screely.png',
+                           project_website={
+                               'url': 'https://cycling-south.com',
+                               'desc': 'cycling-south.com'
+                           },
+                           project_repo=[{
+                               'url': 'https://github.com/tw-smith/tourblog-strapi',
+                               'desc': 'github.com/tw-smith/tourblog-strapi'
+                           },
+                               {
+                                   'url': 'https://github.com/tw-smith/tourblog-angular',
+                                   'desc': 'github.com/tw-smith/tourblog-angular'
+                               }])
+
+
+@app.route('/projects/authserver', methods=['GET'])
+def authserver():
+    return render_template('authserver_template.html',
+                           project_title='Authentication Server',
+                           project_image_url='../static/authserver_home_screely.png',
+                           project_website={
+                               'url': 'https://github.com/tw-smith/auth-server',
+                               'desc': 'github.com/tw-smith/auth-server'
+                           },
+                           project_repo=[{
+                               'url': 'https://github.com/tw-smith/auth-server',
+                               'desc': 'github.com/tw-smith/auth-server'
+                           }])
 
 
 
