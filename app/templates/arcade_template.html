@@ -1,17 +1,18 @@
 {% extends 'project_template.html' %}
 {% block project_description %}
-    <b>Key Technologies: Python, Flask, HTML/CSS, JavaScript, Webhooks, External APIs, SQLite</b>
+    <b>Key Technologies: FastAPI, Angular, WebSockets, JWT, Token Based Authentication</b>
     <br><br>
-    I have completed several long bicycle tours over the years and I like to
-    plot the routes I have followed on a map so I can share my progress day by day with friends and family.
-    Previously, this meant downloading individual GPS track files, manually stitching them together and then
-    uploading the resulting file to a service such as Google Maps.
+    For this project I wanted to explore the use of WebSockets and the challenge of managing real time communication between
+    two clients. I decided to create a version of the classic Snake arcade game, but with multiplayer functionality.
     <br><br>
-    I created Tour Tracker to automate and simplify this process by leveraging the user data available
-    through the public API provided by the popular fitness tracking service Strava. Once the user has
-    granted access to their Strava data, Tour Tracker will retrieve the relevant activity data through the
-    Strava API before creating a visualisation of the route using the Google Maps JavaScript API.
+    I originally built this service using Flask and "vanilla" JavaScript. Whilst the single player version of the game
+    functioned well with this technology stack, I found it difficult to implement an effective WebSockets solution for
+    communication between clients, resulting in choppy, laggy multiplayer gameplay.
     <br><br>
-    The visualisation will automatically be updated whenever the user uploads a new activity to Strava
-    through the use of a webhook subscription through the Strava Webhook Events API.
+    As a result, I rebuilt the project using FastAPI to handle backend tasks such as player registration, game lobby
+    creation and management and handling of the WebSockets communication between connected clients. I also updated the
+    front end implementation to use Angular to handle the frontend visual rendering of the game.
+    <br><br>
+    This project also interfaces with the authentication server I built as a separate project (see the corresponding
+    project page for details), giving me experience of using JWTs in a token based authentication scheme.
 {% endblock %}

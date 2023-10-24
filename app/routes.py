@@ -95,7 +95,17 @@ def cyclingsouth():
 
 @app.route('/projects/authserver', methods=['GET'])
 def authserver():
-    return render_template('authserver.html')
+    return render_template('authserver_template.html',
+                           project_title='Authentication Server',
+                           project_image_url='../static/authserver_home_screely.png',
+                           project_website={
+                               'url': 'https://github.com/tw-smith/auth-server',
+                               'desc': 'github.com/tw-smith/auth-server'
+                           },
+                           project_repo=[{
+                               'url': 'https://github.com/tw-smith/auth-server',
+                               'desc': 'github.com/tw-smith/auth-server'
+                           }])
 
 
 
