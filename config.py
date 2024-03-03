@@ -10,6 +10,7 @@ class Config(object):
     HCAPTCHA_ENABLED = True
     HCAPTCHA_SITE_KEY = os.environ.get('HCAPTCHA_SITE_KEY')
     HCAPTCHA_SECRET_KEY = os.environ.get('HCAPTCHA_SECRET_KEY')
+    HCAPTCHA_VERIFY_URL = os.environ.get('HCAPTCHA_VERIFY_URL')
     SENDGRID_API_KEY = os.environ.get('SENDGRID_API_KEY')
     EMAIL_ADDRESS = os.environ.get('EMAIL_ADDRESS')
 
