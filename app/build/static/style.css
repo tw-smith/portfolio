@@ -1,0 +1,380 @@
+/* CSS Reset */
+* {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
+       /*border: 1px solid red;*/
+       box-sizing: border-box;
+    }
+
+html {
+  font-size: 16px; /* converts browser standard 16px to 10px to make rem maths easier */
+  
+}
+
+b {
+  font-weight: bold;
+}
+
+i {
+  font-style: italic;
+}
+
+/* Set global font styles */
+body {
+  font-family: 'Raleway', 'Helvetica', sans-serif;
+  font-weight: lighter;
+}
+
+/* TOPNAV BLOCK */
+.topnav {
+  display: flex;
+  height: 50px;
+  /*width: 100vw;*/
+  flex-direction: row;
+  background-color: rgb(2,0,36);
+  border-bottom: 0.2rem solid rgb(0,212,255);
+  top: 0;
+  position: sticky;
+  z-index: 101;
+}
+
+.topnav__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+  color: white;
+}
+
+.topnav__link {
+  margin: 0 30px 0 30px;
+  color: white;
+  text-decoration: none;
+}
+
+.topnav__link:hover {
+  color: rgb(98,1,121);
+  transition-duration: 0.5s;
+}
+
+.topnav__link:active {
+  color: #ba1d28;
+}
+
+/* HOME BLOCK */
+.landing {
+  height: 100vh;
+  background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(98,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  font-size: 1.3rem;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+@media screen and (min-width: 1100px) {
+  .landing{
+    font-size: 3.6rem;
+  }
+}
+
+/* BUTTONS BLOCK */
+.button {
+  border: 0.2rem solid white;
+  margin: 2rem;
+  padding: 1rem;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: white;
+}
+
+.button:hover {
+  background-color: white;
+  color: black;
+  transition-duration: 0.5s;
+  /*filter:invert(100%);*/
+}
+
+.button--black {
+  border: 0.2rem solid black;
+  color: black;
+}
+
+.button--black:hover {
+  background-color: black;
+  color: white;
+  transition-duration: 0.5s;
+}
+
+@media screen and (min-width: 1100px) {
+  .button {
+    font-size: 2.4rem;
+  }
+}
+
+.button--project {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  margin: 0;
+  text-decoration: none;
+}
+
+
+/* ABOUT BLOCK */
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-margin-top: 50px;
+}
+
+.about__content {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about__photo {
+  border-radius: 300px;
+  height: 200px;
+  padding: 20px;
+}
+
+@media screen and (min-width: 1100px) {
+  .about__content {
+    /*flex-direction: row;
+    justify-content: space-between;*/
+    width: 60vw;
+  }
+
+  .about__content ul {
+    width: 30vw;
+  }
+
+  .about__photo {
+    width: 300px;
+    height: 300px;
+    border-radius: 300px;
+  }
+}
+
+/* PROJECTS BLOCK */
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-margin-top: 50px;
+  padding-bottom: 15px;
+  /*width: 100vw;*/
+  /*height: 100vh;*/
+  background-color: #f5f5f5;
+}
+
+.projectsgallery {
+  display: grid;
+  grid-template-columns: 100%;
+  row-gap: 10px;
+  column-gap: 10px;
+  width: 90%;
+}
+
+.projectsgallery__tile {
+  position: relative;
+}
+
+.projectsgallery__tile-image {
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  overflow: hidden;
+}
+
+.projectsgallery__tile--overlay {
+  display: none;
+  background-color: rgba(0,0,0, 0.5);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  text-align: center;
+}
+
+.overlay__text {
+  font-weight: bold;
+  color: white;
+  font-size: 2rem;
+}
+
+.projectsgallery__tile:hover > .projectsgallery__tile--overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+
+.project__header {
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 20px;
+}
+
+.project__content {
+  background-color: rgb(230,230,230);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.project__photo {
+  margin-bottom: 1rem;
+  height: auto;
+  width: 90%;
+}
+
+.project__text {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+}
+
+.project__description {
+  margin-top: 0.5rem;
+  text-align: justify;
+}
+
+.repo__list {
+  list-style-image: url("GitHub-Mark-32px.png") ;
+}
+
+
+@media screen and (min-width: 1100px) {
+  .projectsgallery {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    row-gap: 10px;
+    column-gap: 10px;
+    width: 90%;
+  }
+
+  .project__text {
+    width: 50%;
+  }
+
+
+  .project__photo {
+    width: 700px;
+    /*margin: 2rem;*/
+  }
+}
+
+
+/* CONTACT BLOCK */
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(230,230,230);
+}
+
+.contact__icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 20vw;
+  min-width: 200px;
+}
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+@media screen and (min-width: 1100px) {
+  .form {
+    width: 40vw;
+  }
+}
+
+.form__item {
+  background-color: white;
+  border-radius: 0.15rem;
+  padding: 0.5rem;
+  width: 80%;
+  margin: 0.2rem;
+  
+}
+
+
+.form__item > input {
+  width: 100%;
+  /*flex: 4;*/
+  font-family: inherit;
+
+}
+
+.form__item > textarea {
+  /*flex: 1;*/
+  width: 100%;
+  font-family: inherit;
+}
+
+.form__flash {
+  color: red;
+  list-style: none;
+  font-weight: bold;
+}
+
+
+.form-group-hp {
+  display: none;
+}
+
+.header {
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 20px;
+}
+
+
+/* Desktop Styles */
+@media screen and (min-width: 1100px) {
+
+  /* Adjust font sizes for desktop */
+  .body {
+    font-size: 3.2rem;
+  }
+
+  .header {
+    font-size: 3.2rem;
+  }
+
+  .topnav {
+    justify-content: space-between;
+  }
+}

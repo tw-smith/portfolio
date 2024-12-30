@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <Title>Toby Smith</title>
+    <link href="static/style.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <script src="https://js.hcaptcha.com/1/api.js"
+        async defer></script>
+    <meta name="viewport"
+    content="with=device-width, initial-scale=1.0">
+  </head>
+  <!-- NAV BAR -->
+  <body>
+    <nav class="topnav">
+      <ul class="topnav__item">
+        <li><a class="topnav__link" href="#" onclick="smoothScroll(`about`); return false;">ABOUT</a></li>
+        <li><a class="topnav__link" href="#" onclick="smoothScroll(`projects`); return false;">PROJECTS</a></li>
+        <li><a class="topnav__link" href="#" onclick="smoothScroll(`contact`); return false;">CONTACT</a></li>
+      </ul>
+    </nav>
+    <main>
+      <!--HOME SPLASH-->
+      <section id="home" class="landing">
+        <div>Hello, I'm Toby Smith.<br>I'm a backend software engineer.</div>
+        <a href="#" onclick="smoothScroll(`about`); return false;" class="button">Find out more</a>
+      </section>
+      <!--About me-->
+      <section id="about" class="about">
+        <div class="header">ABOUT</div>
+        <div id="about-content" class="about__content">
+        <div>
+          <img class="about__photo" src="static/me.jpg" alt="A photo of Toby">
+        </div>
+        <p>
+            Hi! My name is Toby, and I'm a software engineer based in Bristol. An aerospace engineer by
+            training, I am now exploring new challenges in software development.
+            <br><br>
+            I have a proven record of taking on new challenges with enthusiasm and learning new skills quickly.
+            After working on several complex technical projects in the aerospace sector, I have developed a pragmatic
+            approach to problem-solving and an ability to communicate complex technical concepts in a clear and
+            understandable manner.
+            <br><br>
+            I work in Python, Go, Java and TypeScript with experience building websites and APIs in web frameworks such
+            as Flask and FastAPI.
+            <br><br>
+            Want to find out more? Scroll down to read about some of the projects I have been working on and click on
+            the link below to download a copy of my CV. Want to get in touch? Please send me a message using the
+            contact form at the bottom of this page!
+        </p>
+        </div>
+          <a href="static/Toby_Smith_CV_Public.pdf" target="_blank" class="button button--black">Download CV</a>
+      </section>
+      <!-- Projects Gallery -->
+      <section id="projects" class="projects">
+        <div class="header">
+          PROJECTS
+        </div>
+          <div class="projectsgallery">
+              <a href="projects/tourtracker.html" class="projectsgallery__tile">
+                  <img class="projectsgallery__tile-image" src="static/tourtracker_noborder.png">
+                  <div class="projectsgallery__tile--overlay">
+                      <p class="overlay__text">Tour Tracker</p>
+                  </div>
+              </a>
+              <a href="projects/cyclingsouth.html" class="projectsgallery__tile">
+                  <img class="projectsgallery__tile-image" src="static/cyclingsouth_noborder.png">
+                  <div class="projectsgallery__tile--overlay">
+                      <p class="overlay__text">Cycling South</p>
+                  </div>
+              </a>
+              <a href="projects/arcade.html" class="projectsgallery__tile">
+                  <img class="projectsgallery__tile-image" src="static/arcade_noborder.png">
+                  <div class="projectsgallery__tile--overlay">
+                      <p class="overlay__text">Arcade</p>
+                  </div>
+              </a>
+              <a href="projects/authserver.html" class="projectsgallery__tile">
+                  <img class="projectsgallery__tile-image" src="static/authserver_noborder.jpg">
+                  <div class="projectsgallery__tile--overlay">
+                      <p class="overlay__text">Auth Server</p>
+                  </div>
+              </a>
+          </div>
+      </section>
+      <!-- Contact Me -->
+      <section id="contact" class="contact">
+        <div class="header">CONTACT</div>
+        
+        
+      
+        <form id="contact-form" class="form" action="", method="POST">
+            <input id="csrf_token" name="csrf_token" type="hidden" value="IjE4Yjk5OTBmYWI3NGNiYzRmZjljYjI4MWVkNmI1MjQ1YzM2ZTUyYTEi.Z3Ldhw.GG4gJ1y2VF50jxrZp6u_cK7zg-U">
+          <div class="form__item">
+            <input id="name" name="name" placeholder="Enter your name" required type="text" value="">
+        </div>
+        <div class="form-group-hp">
+          <input id="lastname" name="lastname" placeholder="Enter your last name" type="text" value="">
+        </div>
+        <div class="form__item">
+           <input id="email" name="email" placeholder="Enter your email address." required type="email" value="">
+        </div>
+        <div class="form__item">
+          <textarea id="message" name="message" placeholder="Enter your message." required rows="10">
+</textarea>
+        </div>
+        
+          <div class="form__item">
+          <input id="submit" name="submit" type="submit" value="Send Message">
+        </div>
+        <div class="h-captcha" data-sitekey="5b454c9b-4fa0-4cf8-98d9-a74d22650bd1"></div>
+       
+        </form>
+        <div class="contact__icons">
+          <a href="https://github.com/tw-smith" target="_blank"><img src="static/GitHub-Mark-32px.png" alt="GitHub logo" width="32";></a>
+          <a href="https://www.linkedin.com/in/tw-smith" target="_blank"><img src="static/linkedin_blue.png" alt="LinkedIn logo" width="35"></a>
+        </div>
+        <p>Auth server project image by <a href="https://www.freepik.com/">Freepik</a></p>
+      </section>
+
+    </main>
+
+    <script>
+      function smoothScroll(element){
+        document.getElementById(element).scrollIntoView({behavior:"smooth"});
+      }
+    </script>
+
+  </body>
+</html>
