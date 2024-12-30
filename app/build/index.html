@@ -86,32 +86,27 @@
       <!-- Contact Me -->
       <section id="contact" class="contact">
         <div class="header">CONTACT</div>
-        {% with messages = get_flashed_messages() %}
-        {% if messages %}
-        <ul>
-          {% for message in messages %}
-            <li class="form__flash">{{ message }}</li>
-          {% endfor %}
-        </ul>
-        {% endif %}
-      {% endwith %}
+        
+        
+      
         <form id="contact-form" class="form" action="", method="POST">
-            {{ form.hidden_tag() }}
+            <input id="csrf_token" name="csrf_token" type="hidden" value="IjE4Yjk5OTBmYWI3NGNiYzRmZjljYjI4MWVkNmI1MjQ1YzM2ZTUyYTEi.Z3Ldhw.GG4gJ1y2VF50jxrZp6u_cK7zg-U">
           <div class="form__item">
-            {{ form.name }}
+            <input id="name" name="name" placeholder="Enter your name" required type="text" value="">
         </div>
         <div class="form-group-hp">
-          {{ form.lastname }}
+          <input id="lastname" name="lastname" placeholder="Enter your last name" type="text" value="">
         </div>
         <div class="form__item">
-           {{ form.email }}
+           <input id="email" name="email" placeholder="Enter your email address." required type="email" value="">
         </div>
         <div class="form__item">
-          {{ form.message }}
+          <textarea id="message" name="message" placeholder="Enter your message." required rows="10">
+</textarea>
         </div>
-        {{ hcaptcha }}
+        
           <div class="form__item">
-          {{ form.submit() }}
+          <input id="submit" name="submit" type="submit" value="Send Message">
         </div>
         <div class="h-captcha" data-sitekey="5b454c9b-4fa0-4cf8-98d9-a74d22650bd1"></div>
        

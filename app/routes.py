@@ -14,7 +14,7 @@ def validate_hcaptcha(client_response):
 
 
 @app.route("/", methods=["GET", "POST"])
-@app.route("/index", methods=["GET", "POST"])
+@app.route("/index.html", methods=["GET", "POST"])
 def index():
     form = ContactForm()
     if request.method == "GET":
@@ -49,7 +49,7 @@ def index():
             return redirect("/#contact")
 
 
-@app.route("/projects/tourtracker", methods=["GET"])
+@app.route("/projects/tourtracker.html", methods=["GET"])
 def tourtracker():
     return render_template(
         "tourtracker_template.html",
@@ -68,7 +68,7 @@ def tourtracker():
     )
 
 
-@app.route("/projects/arcade", methods=["GET"])
+@app.route("/projects/arcade.html", methods=["GET"])
 def arcade():
     return render_template(
         "arcade_template.html",
@@ -87,7 +87,7 @@ def arcade():
     )
 
 
-@app.route("/projects/cyclingsouth", methods=["GET"])
+@app.route("/projects/cyclingsouth.html", methods=["GET"])
 def cyclingsouth():
     return render_template(
         "cyclingsouth_template.html",
@@ -110,7 +110,7 @@ def cyclingsouth():
     )
 
 
-@app.route("/projects/authserver", methods=["GET"])
+@app.route("/projects/authserver.html", methods=["GET"])
 def authserver():
     return render_template(
         "authserver_template.html",
